@@ -6,16 +6,10 @@ variable "region" {
   default = "us-east-1"
 }
 
+variable "repository_url" {}
 variable "app_version" {
-  //default = "1"
+  default = "1"
 }
-
-#Bucket variables
-variable "aws_bucket_prefix" {
-  type    = string
-  default = "is402"
-}
-
 
 
 # TODO: 09/13/21 AWS Provider
@@ -44,20 +38,6 @@ variable "ecs_amis" {
   }
 }
 
-
-# TODO: 09/13/21 ECR config
-resource "aws_ecr_repository" "myapp" {
-  name = "myapp"
-}
- // TODO: 09/18/21 Resource random to create unique S3 name
- resource "random_integer" "rand" {
-  min = 10000
-  max = 99999
-}
-
-locals {
-  bucket_name = "${var.aws_bucket_prefix}-${random_integer.rand.result}"
-}
 
 # TODO: 09/13/21 ECS config
 # cluster
@@ -217,7 +197,7 @@ resource "aws_iam_policy_attachment" "ecs-service-attach1" {
 data "template_file" "myapp-task-definition-template" {
   template = file("templates/app.json.tpl")
   vars = {
-    REPOSITORY_URL = replace(aws_ecr_repository.myapp.repository_url, "https://", ""),
+    REPOSITORY_URL = var.repository_url,
     APP_VERSION    = var.app_version
   }
 }
@@ -453,26 +433,4 @@ output "elb" {
   value = aws_elb.myapp-elb.dns_name
 }
 
-output "s3_bucket" {
-  value = aws_s3_bucket.state_bucket.bucket
-}
 
- //TODO: 09/18/21 Add S3 bucket for backend config
- resource "aws_s3_bucket" "state_bucket" {
-  bucket        = local.bucket_name
-  acl           = "private"
-  force_destroy = true
-
-  versioning {
-    enabled = true
-  }
-
-}
-
-terraform {
-  backend "s3" {
-    bucket = "is402-66593"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
-  }
-} 
