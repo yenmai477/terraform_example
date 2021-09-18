@@ -7,7 +7,7 @@ variable "region" {
 }
 
 variable "app_version" {
-  default = "1"
+  //default = "1"
 }
 
 #Bucket variables
