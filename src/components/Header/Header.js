@@ -25,11 +25,11 @@ const Header = ({ toggle }) => {
         <NavBtn>
           <a
             className="btn PrimaryBtn"
-            href="https://github.com/gurupawar/"
+            href="https://github.com/yenmai477"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            See more
           </a>
         </NavBtn>
         <Bars onClick={toggle} />
