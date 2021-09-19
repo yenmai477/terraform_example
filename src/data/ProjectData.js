@@ -1,3 +1,9 @@
+import ReactLogo from "../Assets/stacks/react.svg";
+import TerraformLogo from "../Assets/stacks/terraform.svg";
+import DockerLogo from "../Assets/stacks/docker.svg";
+import JenkinsLogo from "../Assets/stacks/jenkins.svg";
+import AWSLogo from "../Assets/stacks/aws.svg";
+
 // --------------------------------------- Project List
 export const ProjectList = [
   {
@@ -52,19 +58,31 @@ export const stackList = [
     name: "JavaScript",
   },
   {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/bootstrap.svg",
-    name: "Bootstrap",
+    img: ReactLogo,
+    name: "React",
   },
   {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/sass.svg",
-    name: "Scss",
+    img: TerraformLogo,
+    name: "Terraform",
+  },
+  {
+    img: DockerLogo,
+    name: "Docker",
+  },
+  {
+    img: AWSLogo,
+    name: "AWS",
+  },
+  {
+    img: JenkinsLogo,
+    name: "Jenkins",
   },
   {
     img: "https://gurupawar.github.io/portfolio/assets/skill/git.svg",
     name: "Git",
   },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/responsive.svg",
-    name: "Responsive",
-  },
+  // {
+  //   img: "https://gurupawar.github.io/portfolio/assets/skill/responsive.svg",
+  //   name: "Responsive",
+  // },
 ];

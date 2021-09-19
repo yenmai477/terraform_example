@@ -12,21 +12,24 @@ function About() {
   return (
     <ContactWrapper id="about">
       <div className="Container">
-        <div className="SectionTitle">About Me</div>
+        <div className="SectionTitle">About Us</div>
         <div className="BigCard">
           <Image
             src="https://gurupawar.github.io/portfolio/assets/man-svgrepo-com.svg"
             alt="man-svgrepo"
           />
           <div className="AboutBio">
-            Hello! My name is <strong>Gurushesh Pawar</strong> and I enjoy
-            creating things that live on the internet. My interest in web
-            development started back in 2014 when I decided to try editing
-            custom Blogger themes — redesigning & modifying blogger themes
-            taught me a lot about HTML & CSS!
+            Hello! My name is <strong>Yen Mai</strong>, a member of Group 12 at{" "}
+            <strong>IS402.M11</strong>. The others member in my group is{" "}
+            <strong>Thuong Ha</strong>, <strong>Linh Le</strong>, and{" "}
+            <strong>Huan Cao</strong>. We have created this page as a demo for
+            our presentation about Terraform and Infrastructure as Code. It's
+            built with React, dockerized with Docker, and using Terraform to
+            create infrastructure on AWS.
           </div>
           <div className="AboutBio tagline2">
-            I have become confident using the following technologies.
+            These are the detailed technologies we have chosen to develop this
+            application:
           </div>
           <Technologies>
             {stackList.map((stack, index) => (
