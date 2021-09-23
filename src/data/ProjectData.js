@@ -1,44 +1,30 @@
 import ReactLogo from "../Assets/stacks/react.svg";
 import TerraformLogo from "../Assets/stacks/terraform.svg";
 import DockerLogo from "../Assets/stacks/docker.svg";
-import JenkinsLogo from "../Assets/stacks/jenkins.svg";
 import AWSLogo from "../Assets/stacks/aws.svg";
+
+import GithubImage from "../Assets/projects/Github.JPG";
+import DemoPage from "../Assets/projects/DemoPage.JPG";
 
 // --------------------------------------- Project List
 export const ProjectList = [
   {
-    img: "https://gurupawar.github.io/portfolio/assets/project_1.png",
-    title: "Spense",
-    description: "Codewell challenge, Spense is a landing page for writers.",
-    tech_stack: "Html, Css, Javascript",
-    github_url: "https://github.com/gurupawar/spense",
-    demo_url: "https://gurupawar.github.io/spense/",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/project_2.png",
-    title: "Fiber",
+    img: GithubImage,
+    title: "Source Code",
     description:
-      "An online portfolio generator. Great to practice flex/grid layouts, absolute positioning and sliders.",
-    tech_stack: "Html, Css, Javascript",
-    github_url: "https://github.com/gurupawar/fiber",
-    demo_url: "https://gurupawar.github.io/fiber/",
+      "It's a source code of this demo. You can you this for any purpose and don't forget give me a star.",
+    tech_stack: "React, Docker, AWS, Terraform",
+    github_url: "https://github.com/yenmai477/terraform_example",
+    // demo_url: "https://gurupawar.github.io/spense/",
   },
   {
-    img: "https://gurupawar.github.io/portfolio/assets/portfolio.png",
-    title: "Portfolio",
-    description: "Ofcourse i made my own personal portfolio website.",
-    tech_stack: "Reactjs, Css",
-    github_url: "https://github.com/gurupawar/portfolio-react",
-    demo_url: "https://gportfolio.vercel.app/",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/project_3.png",
-    title: "Ecommerce website",
+    img: DemoPage,
+    title: "Demo Page",
     description:
-      "Created simple ecommerce website using reactjs and react-use-cart plugin.",
+      "We have created this page as a demo for our presentation about Terraform and Infrastructure as Code.",
     tech_stack: "Reactjs, Css",
-    github_url: "https://github.com/gurupawar/ecommerce-react-app",
-    demo_url: "https://ecommerce-react-app.vercel.app/",
+    github_url: "https://github.com/yenmai477/terraform_example",
+    demo_url: "",
   },
 ];
 
@@ -72,10 +58,6 @@ export const stackList = [
   {
     img: AWSLogo,
     name: "AWS",
-  },
-  {
-    img: JenkinsLogo,
-    name: "Jenkins",
   },
   {
     img: "https://gurupawar.github.io/portfolio/assets/skill/git.svg",
